@@ -1,0 +1,53 @@
+<section>
+  
+  <div class="panel panel-signin">
+      <div class="panel-body">
+          <div class="logo text-center">
+              <img src="assets/images/logo.png" alt="InfosolutionsWeb Logo" >
+          </div>
+                    
+          <div class="mb30"></div>
+          
+          <form #f="ngForm" [formGroup]="signupForm" (ngSubmit)="onFormSubmit()" autocomplete="off" role="form" novalidate>
+              <div class="mb15">
+              <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>                  
+                  <input type="text" class="form-control" formControlName = "email" id="inputEmail" placeholder="Email">
+              </div><!-- input-group -->
+              <!-- Email error block -->
+              <div *ngIf="f.submitted || (email.invalid && email.touched)" class="col-sm-12 text-danger">
+                <div *ngIf = "email.errors?.required">
+                  Email field can't be blank
+                </div>
+                <div *ngIf = "email.errors?.pattern">
+                  The email id doesn't seem right
+                </div>  
+              </div>
+            </div>
+            <div class="mb15">
+              <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>                  
+                  <input type="password" class="form-control" formControlName = "password"  placeholder="Password">
+             </div><!-- input-group -->
+                 <!-- Password error block -->
+              <div *ngIf="f.submitted || (password.invalid && password.touched)" class="col-sm-12 text-danger">
+                <div *ngIf = "password.errors?.required">
+                    Password field can't be blank
+                  </div>
+                 <div *ngIf = "password.hasError('minlength')"> 
+                    Password needs to be more than 8 characters
+                </div>   
+              </div>
+            </div> 
+              <div class="clearfix">                  
+                  <div class="pull-right">
+                      <button type="submit" class="btn btn-success">Sign In <i class="fa fa-angle-right ml5"></i></button>
+                  </div>
+              </div>                      
+          </form>
+          
+      </div><!-- panel-body -->
+      
+  </div><!-- panel -->
+  
+</section>
