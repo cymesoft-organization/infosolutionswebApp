@@ -1,214 +1,187 @@
-<header *ngIf="menuSwitch()">
-    <div class="headerwrapper">
-        <div class="header-left">
-            <a routerLink="/dashboard" class="logo">
-                <img src="assets/images/logo.png" alt="" /> 
-            </a>
-            <div class="pull-right">
-                <a href="" class="menu-collapse">
-                    <i class="fa fa-bars"></i>
+    <!-- Begin page -->
+    <div id="wrapper">
+
+        <!-- Top Bar Start -->
+        <div class="topbar">
+
+            <!-- LOGO -->
+            <div class="topbar-left">
+                <a href="index.html" class="logo"><span><img src="assets/images/logo.png" alt="" height="40"></span>
+                    <i><img src="assets/images/mlogo.png" alt="" height="37"></i>
                 </a>
+                <!-- Image logo -->
+                <!--<a href="index.html" class="logo">-->
+                    <!--<span>-->
+                        <!--<img src="assets/images/logo.png" alt="" height="30">-->
+                    <!--</span>-->
+                    <!--<i>-->
+                        <!--<img src="assets/images/logo_sm.png" alt="" height="28">-->
+                    <!--</i>-->
+                <!--</a>-->
             </div>
-        </div><!-- header-left -->
-        
-        <div class="header-right">
-            
-            <div class="pull-right">
-                
-                <form class="form form-search" action="search-results.html">
-                    <input type="search" class="form-control" placeholder="Search" />
-                </form>
-                
-                <div class="btn-group btn-group-list btn-group-notification">
-                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                      <i class="fa fa-bell-o"></i>
-                      <span class="badge">5</span>
-                    </button>
-                    <div class="dropdown-menu pull-right">
-                        <a href="" class="link-right"><i class="fa fa-search"></i></a>
-                        <h5>Notification</h5>
-                        <ul class="media-list dropdown-list">
-                            <li class="media">
-                                <img class="img-circle pull-left noti-thumb" src="assets/images/photos/user1.png" alt="">
-                                <div class="media-body">
-                                  <strong>Nusja Nawancali</strong> likes a photo of you
-                                  <small class="date"><i class="fa fa-thumbs-up"></i> 15 minutes ago</small>
-                                </div>
-                            </li>
-                            <li class="media">
-                                <img class="img-circle pull-left noti-thumb" src="assets/images/photos/user2.png" alt="">
-                                <div class="media-body">
-                                  <strong>Weno Carasbong</strong> shared a photo of you in your <strong>Mobile Uploads</strong> album.
-                                  <small class="date"><i class="fa fa-calendar"></i> July 04, 2014</small>
-                                </div>
-                            </li>
-                            <li class="media">
-                                <img class="img-circle pull-left noti-thumb" src="assets/images/photos/user3.png" alt="">
-                                <div class="media-body">
-                                  <strong>Venro Leonga</strong> likes a photo of you
-                                  <small class="date"><i class="fa fa-thumbs-up"></i> July 03, 2014</small>
-                                </div>
-                            </li>
-                            <li class="media">
-                                <img class="img-circle pull-left noti-thumb" src="assets/images/photos/user4.png" alt="">
-                                <div class="media-body">
-                                  <strong>Nanterey Reslaba</strong> shared a photo of you in your <strong>Mobile Uploads</strong> album.
-                                  <small class="date"><i class="fa fa-calendar"></i> July 03, 2014</small>
-                                </div>
-                            </li>
-                            <li class="media">
-                                <img class="img-circle pull-left noti-thumb" src="assets/images/photos/user1.png" alt="">
-                                <div class="media-body">
-                                  <strong>Nusja Nawancali</strong> shared a photo of you in your <strong>Mobile Uploads</strong> album.
-                                  <small class="date"><i class="fa fa-calendar"></i> July 02, 2014</small>
-                                </div>
-                            </li>
-                        </ul>
-                        <div class="dropdown-footer text-center">
-                            <a href="" class="link">See All Notifications</a>
-                        </div>
-                    </div><!-- dropdown-menu -->
-                </div><!-- btn-group -->
-                
-                <div class="btn-group btn-group-list btn-group-messages">
-                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                        <i class="fa fa-envelope-o"></i>
-                        <span class="badge">2</span>
-                    </button>
-                    <div class="dropdown-menu pull-right">
-                        <a href="" class="link-right"><i class="fa fa-plus"></i></a>
-                        <h5>New Messages</h5>
-                        <ul class="media-list dropdown-list">
-                            <li class="media">
-                                <span class="badge badge-success">New</span>
-                                <img class="img-circle pull-left noti-thumb" src="assets/images/photos/user1.png" alt="">
-                                <div class="media-body">
-                                  <strong>Nusja Nawancali</strong>
-                                  <p>Hi! How are you?...</p>
-                                  <small class="date"><i class="fa fa-clock-o"></i> 15 minutes ago</small>
-                                </div>
-                            </li>
-                            <li class="media">
-                                <span class="badge badge-success">New</span>
-                                <img class="img-circle pull-left noti-thumb" src="assets/images/photos/user2.png" alt="">
-                                <div class="media-body">
-                                  <strong>Weno Carasbong</strong>
-                                  <p>Lorem ipsum dolor sit amet...</p>
-                                  <small class="date"><i class="fa fa-clock-o"></i> July 04, 2014</small>
-                                </div>
-                            </li>
-                            <li class="media">
-                                <img class="img-circle pull-left noti-thumb" src="assets/images/photos/user3.png" alt="">
-                                <div class="media-body">
-                                  <strong>Venro Leonga</strong>
-                                  <p>Do you have the time to listen to me...</p>
-                                  <small class="date"><i class="fa fa-clock-o"></i> July 03, 2014</small>
-                                </div>
-                            </li>
-                            <li class="media">
-                                <img class="img-circle pull-left noti-thumb" src="assets/images/photos/user4.png" alt="">
-                                <div class="media-body">
-                                  <strong>Nanterey Reslaba</strong>
-                                  <p>It might seem crazy what I'm about to say...</p>
-                                  <small class="date"><i class="fa fa-clock-o"></i> July 03, 2014</small>
-                                </div>
-                            </li>
-                            <li class="media">
-                                <img class="img-circle pull-left noti-thumb" src="assets/images/photos/user1.png" alt="">
-                                <div class="media-body">
-                                  <strong>Nusja Nawancali</strong>
-                                  <p>Hey I just met you and this is crazy...</p>
-                                  <small class="date"><i class="fa fa-clock-o"></i> July 02, 2014</small>
-                                </div>
-                            </li>
-                        </ul>
-                        <div class="dropdown-footer text-center">
-                            <a href="" class="link">See All Messages</a>
-                        </div>
-                    </div><!-- dropdown-menu -->
-                </div><!-- btn-group -->
-                
-                <div class="btn-group btn-group-option">
-                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                      <i class="fa fa-caret-down"></i>
-                    </button>
-                    <ul class="dropdown-menu pull-right" role="menu">
-                      <li><a href="#"><i class="glyphicon glyphicon-user"></i> My Profile</a></li>                      
-                      <li><a href="#"><i class="glyphicon glyphicon-cog"></i> Account Settings</a></li>                      
-                      <li class="divider"></li>
-                      <li><a  (click)="logout()"><i class="glyphicon glyphicon-log-out"></i>Sign Out</a></li>
+
+            <!-- Button mobile view to collapse sidebar menu -->
+            <div class="navbar navbar-default" role="navigation">
+                <div class="container">
+
+                    <!-- Navbar-left -->
+                    <ul class="nav navbar-nav navbar-left">
+                        <li>
+                            <button class="button-menu-mobile open-left waves-effect waves-light">
+                                <i class="mdi mdi-menu"></i>
+                            </button>
+                        </li>
+                        <li class="hidden-xs">
+                            <form role="search" class="app-search">
+                                <input type="text" placeholder="Search..."
+                                       class="form-control">
+                                <a href=""><i class="fa fa-search"></i></a>
+                            </form>
+                        </li>
                     </ul>
-                </div><!-- btn-group -->
-                
-            </div><!-- pull-right -->
-            
-        </div><!-- header-right -->
-        
-    </div><!-- headerwrapper -->
-</header>
-<section >
-  <div class="mainwrapper" >
-      <div class="leftpanel" *ngIf="menuSwitch()">
-          <div class="media profile-left">
-              <a class="pull-left profile-thumb" href="profile.html">
-                  <img class="img-circle" src="assets/images/photos/profile.png" alt="">
-              </a>
-              <div class="media-body">
-                  <h4 class="media-heading">Admin</h4>
-                  <small class="text-muted">Admin Login</small>
-              </div>
-          </div><!-- media -->
-          
-          <h5 class="leftpanel-title">Navigation</h5>
-          <ul class="nav nav-pills nav-stacked">
-              <li class="active"><a routerLink="/dashboard"><i class="fa fa-home"></i> <span>Dashboard</span></a></li>
-              <li><a class="link" routerLink="/user-request"><span class="pull-right badge">5</span><i class="fa fa-envelope-o"></i> <span>Users Request</span></a></li>
-              <li><a><i class="fa fa-home"></i><span>Production LOG</span></a></li>
-              <li><a><i class="fa fa-home"></i><span>Payment histroy</span></a></li>              
-              <li class="parent"><a href=""><i class="fa fa-suitcase"></i> <span>Users</span></a>
-                  <ul class="children">
-                      <li><a>Transcriber</a></li>                                           
-                  </ul>
-              </li>
-              <!--<li class="parent"><a href=""><i class="fa fa-edit"></i> <span>Forms</span></a>
-                  <ul class="children">
-                      <li><a href="code-editor.html">Code Editor</a></li>
-                      <li><a href="general-forms.html">General Forms</a></li>
-                      <li><a href="form-layouts.html">Layouts</a></li>
-                      <li><a href="wysiwyg.html">Text Editor</a></li>
-                      <li><a href="form-validation.html">Validation</a></li>
-                      <li><a href="form-wizards.html">Wizards</a></li>
-                  </ul>
-              </li>
-              <li class="parent"><a href=""><i class="fa fa-bars"></i> <span>Tables</span></a>
-                  <ul class="children">
-                      <li><a href="basic-tables.html">Basic Tables</a></li>
-                      <li><a href="data-tables.html">Data Tables</a></li>
-                  </ul>
-              </li>
-              <li><a href="maps.html"><i class="fa fa-map-marker"></i> <span>Maps</span></a></li>
-              <li class="parent"><a href=""><i class="fa fa-file-text"></i> <span>Pages</span></a>
-                  <ul class="children">
-                      <li><a href="notfound.html">404 Page</a></li>
-                      <li><a href="blank.html">Blank Page</a></li>
-                      <li><a href="calendar.html">Calendar</a></li>
-                      <li><a href="invoice.html">Invoice</a></li>
-                      <li><a href="locked.html">Locked Screen</a></li>
-                      <li><a href="media-manager.html">Media Manager</a></li>
-                      <li><a href="people-directory.html">People Directory</a></li>
-                      <li><a href="profile.html">Profile</a></li>                                
-                      <li><a href="search-results.html">Search Results</a></li>
-                      <li><a href="signin.html">Sign In</a></li>
-                      <li><a href="signup.html">Sign Up</a></li>
-                  </ul>
-              </li>-->
-              
-          </ul>
-          
-      </div><!-- leftpanel -->
-      <flash-messages></flash-messages>
-      <router-outlet></router-outlet>
-  </div><!-- mainwrapper -->
-</section>
+
+                    <!-- Right(Notification) -->
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" class="right-menu-item dropdown-toggle" data-toggle="dropdown">
+                                <i class="mdi mdi-bell"></i>
+                                <span class="badge up bg-primary">4</span>
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a href="#" class="right-menu-item dropdown-toggle" data-toggle="dropdown">
+                                <i class="mdi mdi-email"></i>
+                                <span class="badge up bg-danger">8</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="javascript:void(0);" class="right-bar-toggle right-menu-item">
+                                <i class="mdi mdi-settings"></i>
+                            </a>
+                        </li>
+
+                        <li class="dropdown user-box">
+                            <a href="" class="dropdown-toggle waves-effect waves-light user-link" data-toggle="dropdown" aria-expanded="true">
+                                <img src="assets/images/users/avatar-1.jpg" alt="user-img" class="img-circle user-img">
+                            </a>
+
+                            <ul class="dropdown-menu dropdown-menu-right arrow-dropdown-menu arrow-menu-right user-list notify-list">
+                                <li><a href="javascript:void(0)"><i class="ti-user m-r-5"></i> Profile</a></li>
+                                <li><a href="javascript:void(0)"><i class="ti-settings m-r-5"></i> Settings</a></li>
+                                <li><a href="javascript:void(0)"><i class="ti-lock m-r-5"></i> Lock screen</a></li>
+                                <li><a href="javascript:void(0)"><i class="ti-power-off m-r-5"></i> Logout</a></li>
+                            </ul>
+                        </li>
+
+                    </ul> <!-- end navbar-right -->
+
+                </div><!-- end container -->
+            </div><!-- end navbar -->
+        </div>
+        <!-- Top Bar End -->
 
 
+        <!-- ========== Left Sidebar Start ========== -->
+        <div class="left side-menu">
+            <div class="sidebar-inner slimscrollleft">
+
+                <!--- Sidemenu -->
+                <div id="sidebar-menu">
+                    <!-- User detail -->
+                    <div class="user-details">
+                        <div class="overlay"></div>
+                        <div class="text-center">
+                            <img src="assets/images/users/avatar-1.jpg" alt="" class="thumb-md img-circle">
+                        </div>
+                        <div class="user-info">
+                            <div>
+                                <a href="#setting-dropdown" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">spk2kamalakkannan@gmail.com<span class="mdi mdi-menu-down"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end user detail -->
+
+                    <div class="dropdown" id="setting-dropdown">
+                        <ul class="dropdown-menu">
+                            <li><a href="javascript:void(0)"><i class="mdi mdi-face-profile m-r-5"></i> Profile</a></li>
+                            <li><a href="javascript:void(0)"><i class="mdi mdi-account-settings-variant m-r-5"></i> Settings</a></li>
+                            <li><a href="javascript:void(0)"><i class="mdi mdi-logout m-r-5"></i> Logout</a></li>
+                        </ul>
+                    </div>
+
+                    <ul>
+                        <li class="menu-title">Navigation</li>
+
+                        <li>
+                            <a routerLink="/dashboard" class="waves-effect"><i class="mdi mdi-view-dashboard"></i> <span> Dashboard </span> </a>
+                        </li>
+                        <li>
+                           <a routerLink="/user-request" class="waves-effect"><i class="mdi mdi-email"></i><span> Users Request </span></a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-layers"></i><span> Production LOG </span></a>
+                        </li>
+
+                        <li>
+                            <a href="javascript:;" class="waves-effect"><i class="mdi mdi-file-document-box"></i><span> Payment histroy </span></a>
+                        </li>
+
+                        <li class="has_sub">
+                            <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-account-box"></i><span> Users </span> <span class="menu-arrow"></span></a>
+                            <ul class="list-unstyled">
+                                <li><a> Transcriber</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="waves-effect"><i class="mdi mdi-account-settings-variant"></i><span> Manage Role </span></a>
+                        </li>
+                   </ul>
+                </div>
+                <!-- Sidebar -->
+                <div class="clearfix"></div>
+
+                <div class="help-box">
+                    <h5 class="text-muted m-t-0">For Help ?</h5>
+                    <p class=""><span class="text-dark"><b>Email:</b></span> <br/> support@infosolutionsweb.com</p>
+                    <p class="m-b-0"><span class="text-dark"><b>Call:</b></span> <br/> +1-843-217-5804</p>
+                </div>
+
+            </div>
+            <!-- Sidebar -left -->
+
+        </div>
+        <!-- Left Sidebar End -->
+
+
+
+        <!-- ============================================================== -->
+        <!-- Start right Content here -->
+        <!-- ============================================================== -->
+        <div class="content-page">
+            <!-- Start content -->
+            <div class="content">
+                <div class="container">
+
+                    <flash-messages></flash-messages>
+                    <router-outlet></router-outlet>
+
+                </div> <!-- container -->
+
+            </div> <!-- content -->
+
+            <footer class="footer text-right">
+                2018 © All Rights Reserved by InfoSolutionsWeb
+            </footer>
+
+        </div>
+
+
+        <!-- ============================================================== -->
+        <!-- End Right content here -->
+        <!-- ============================================================== -->
+
+    </div>
+    <!-- END wrapper -->
