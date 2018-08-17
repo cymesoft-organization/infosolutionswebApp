@@ -6,6 +6,7 @@
   <base href="/">
   <!-- App css -->
   <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <link href="assets/css//dataTables.min.css" rel="stylesheet" type="text/css"/>
   <link href="assets/css/core.css" rel="stylesheet" type="text/css" />
   <link href="assets/css/components.css" rel="stylesheet" type="text/css" />
   <link href="assets/css/icons.css" rel="stylesheet" type="text/css" />
@@ -25,7 +26,7 @@
 </head>
 <body class="fixed-left">
           <!-- Loader -->
-          <div id="preloader">
+          <!-- <div id="preloader">
               <div id="status">
                   <div class="spinner">
                     <div class="spinner-wrapper">
@@ -36,7 +37,7 @@
                     </div>
                   </div>
               </div>
-          </div>
+          </div> -->
   <app-root></app-root>
 </body>
 <!-- theme script -->
@@ -45,7 +46,7 @@
 </script>
 
 <!-- jQuery  -->
-<script src="assets/js/jquery.min.js"></script>
+<!-- <script src="assets/js/jquery.min.js"></script> -->
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/detect.js"></script>
 <script src="assets/js/fastclick.js"></script>
@@ -59,5 +60,13 @@
 <script src="assets/js/jquery.app.js"></script>
 
 <!-- <script src="assets/js/dashboard.js"></script> -->
-<!-- End Theme script -->
+<!-- End script -->
+<script>// Loader
+  $(window).load(function() {
+      $('#status').fadeOut();
+      $('#preloader').delay(350).fadeOut('slow');
+      $('body').delay(350).css({
+          'overflow': 'visible'
+      });
+  });</script>
 </html>

@@ -5,7 +5,8 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlashMessagesModule } from 'angular2-flash-messages';
-
+import { DataTablesModule } from 'angular-datatables';
+import * as $ from 'jquery';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -16,6 +17,7 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { ApiService } from './api.service';
 import { AuthGuard } from './auth.guard';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { MyProfileComponent } from './my-profile/my-profile.component';
 
 
 @NgModule({
@@ -24,11 +26,13 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     LoginComponent,
     UserRequestComponent,
     DashboardComponent,
-    PagenotfoundComponent
+    PagenotfoundComponent,
+    MyProfileComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    DataTablesModule,
     ReactiveFormsModule,
     AppRoutingModule,
     HttpClientModule,
